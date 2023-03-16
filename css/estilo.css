@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+#botones .boton1{
+    width: 400px;
+    display: block;
+    margin: auto;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,0.3);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#botones .boton1:hover{
+    background-color: rgb(224, 15, 15);
+}
+#menu{
+    height: 580px;
+
+}
+
+#menu h1{
+    color: azure;
+    font-size: 3.8em;
+    padding-top: 50px;
+}

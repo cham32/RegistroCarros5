@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+#botones{
+    font-size: .8em;
+    font-weight: bold;
+    padding: 1px 13px;
+    border-radius: 5px;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+}

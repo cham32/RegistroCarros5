@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    
+}
+.correo1{
+    color: azure;
+    font-size: 18px;
+    text-align: left;
+    float: left;
+}
+.ima{
+    margin-right: 15px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 2px;
+    
+}
+#pregunta1{
+    border: 2px solid #000000;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 10px 0;
+}
+.containers{
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+}
