@@ -1,11 +1,22 @@
+// Mostrar usuarios con boton borrar
 function mostrarUsuario() {
-    $.get('mostrar_usuario.php',            // la URL para la petición
-        function(respuesta,status) {        //Funcion que recibe la respuesta
-            $("#listausers").html(respuesta);  //Cambia el DOM
+    $.get('mostrar_usuario.php',
+        function(respuesta,status) {
+            $("#listausers").html(respuesta);
         },              
     );
 }
 
+// Mostrar usuarios sin boton borrar
+function mirarUsuario() {
+    $.get('mirar_usuario.php',
+        function(respuesta,status) {
+            $("#listausers").html(respuesta);
+        },              
+    );
+}
+
+// Borrar usuarios
 function borrarUsuario3($valor) {
     $.post("eliminar_usuarios.php",
         {placa:$valor}

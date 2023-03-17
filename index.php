@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if( isset( $_SESSION['access'] ) ) {
+  if ($_SESSION['access'] == 0) {
+    header("Location:login.html");
+  }
+  if ($_SESSION['access'] == 2) {
+    header("Location:usuario.php");
+  }
+} else {
+  header("Location:login.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -29,20 +43,14 @@
 }
     </style>
 </head>
-
 <!-- ************************* PAGINA ***************************************** --> 
-<!-- Funciones llamadas despues de cargar la pagina --> 
-<body onload='mostrarUsuari();'>
+<body>
     <section id="menu">
         <h1>Iniciar sesión</h1>
         <section id="botones">
                 <input type="button" class="boton1" name="botonLogin" value="Login" onclick="location.href='login.html'">
-                <input type="button" class="boton1" name="botonRegister" value="Register" onclick="location.href='register.html'">            
-
+                <input type="button" class="boton1" name="botonRegister" value="Admin" onclick="location.href='admin.php'">            
         </section>
     </section>
-
-    
 </body>
-
 </html>

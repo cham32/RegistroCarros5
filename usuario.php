@@ -36,7 +36,7 @@ if( isset( $_SESSION['access'] ) ) {
   </button>
   <title>Login</title>
 </head>
-<body>
+<body onload='mirarUsuario();'>
   <section class="form-register">
     <form id="mi_formulario" method="Post">
       <h4>Aceptado</h4>

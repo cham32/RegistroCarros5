@@ -34,7 +34,6 @@
             <th>Nombre</th>
             <th>Correo</th>   
             <th>Rol</th>
-            <th>Acci&oacute;n</th>
         </tr>";
 
         // Obtiene cada fila (arreglo) de resultados
@@ -44,12 +43,6 @@
                 echo "<td>" . $ren['usuario'] . "</td>";
                 echo "<td>" . $ren['correo'] . "</td>";
                 echo "<td>" . $ren['rol'] . "</td>";
-                echo "<td>";
-                echo "     <form method='Post'>"; //El input en un form para realizar un submit ";
-                echo "         <input type='image' src='img/borrar.jpg' value='Borra Todo' 
-                               onclick='borrarUsuario3(".$ren['id'].")'>";
-                echo "     </form>";
-                echo "</td>";
             echo "</tr>";
         }
     echo "</table>";
