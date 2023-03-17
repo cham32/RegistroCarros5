@@ -1,21 +1,24 @@
 <?php
+//Llama autoloader de composer
+require 'vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Llama autoloader de composer
-require 'vendor/autoload.php';
-
 //Crea un objeto PHPMailer;  `true` habilita excepciones
 $mail = new PHPMailer(true);
-$pass =substr(md5(microtime()),1,10);
+
+//Variables destinatario y contraseña
+$pass =substr(md5(rand()),1,10);
+$pass_hash = md5($pass);
 $User=$_POST['Username'];
 
 //Acciones de BD
 include("./configdb.php");
 if (!$con)
 die('No se pudo conectar: ' . mysqli_error($con));
-$sql="UPDATE usuarios SET contraseña='$pass'WHERE correo='$User'";
+$sql="UPDATE usuarios SET contraseña='".$pass_hash."' WHERE correo='".$User."'";
 if($con->query($sql)=== TRUE){
     echo "usuario modificado correctamente";
 }else{
