@@ -9,7 +9,7 @@
 
     // Prepara  la consulta SQL
     $usuario = $_POST["login"];
-    $contraseña =password_hash($_POST['register'],PASSWORD_DEFAULT);
+    $contraseña =md5($_POST['register']);
 
     $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario = '".$usuario."' and contraseña = '".$contraseña."'");
     $nr = mysqli_num_rows($query);
