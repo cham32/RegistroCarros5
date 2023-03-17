@@ -1,6 +1,5 @@
 <?php
-    // Prepara  la consulta SQL
-    //$sql="DELETE FROM usuarios Where id='".$placa."'"; 
+    $sql="DELETE FROM usuarios"; 
     if (isset($_POST) && !empty($_POST)){     
         $placa = $_POST['placa']; 
         // Prepara  la consulta SQL
