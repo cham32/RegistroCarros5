@@ -27,10 +27,10 @@
 <?php
     //Obtiene el valor enviado
     $q = intval($_GET['q']);                              
-    $con = mysqli_connect('localhost','tecmochis','zxc123');
+
+    include("./configdb.php");
     if (!$con)
     die('No se pudo conectar: ' . mysqli_error($con));
-    mysqli_select_db($con,'tecmochis');
 
     // Prepara  la consulta SQL
     $sql="SELECT * FROM carro WHERE placa = '".$q."'";   

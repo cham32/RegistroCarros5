@@ -13,13 +13,12 @@
 <body>
 <?php
   
-    $con = mysqli_connect('localhost','tecmochis','zxc123zxc');   
+    include("configdb.php");
 
     if (!$con) {
         // imprime un mensaje de error y sale del script
         die('No se pudo conectar: ' . mysqli_error($con)); 
     }
-    mysqli_select_db($con,'tecmochis'); 
 
     // Prepara  la consulta SQL
     $sql="SELECT * FROM carro"; 
