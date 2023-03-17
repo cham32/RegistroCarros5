@@ -1,10 +1,10 @@
 <?php
     // Prepara  la consulta SQL
-    $sql="DELETE FROM carro Where placa='".$placa."'"; 
+    //$sql="DELETE FROM usuarios Where id='".$placa."'"; 
     if (isset($_POST) && !empty($_POST)){     
         $placa = $_POST['placa']; 
         // Prepara  la consulta SQL
-        $sql="DELETE FROM carro Where placa='".$placa."'";   
+        $sql="DELETE FROM usuarios Where id='".$placa."'";   
     }
 
     include("./configdb.php");

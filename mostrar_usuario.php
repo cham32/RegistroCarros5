@@ -34,7 +34,7 @@
             <th>Nombre</th>
             <th>Correo</th>   
             <th>Hash</th>
-            <th>Acci&oacute;</th>
+            <th>Acci&oacute;n</th>
         </tr>";
 
         // Obtiene cada fila (arreglo) de resultados
