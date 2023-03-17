@@ -21,7 +21,7 @@
     }
 
     // Prepara  la consulta SQL
-    $sql="SELECT * FROM carro"; 
+    $sql="SELECT * FROM usuarios"; 
     
     // Realiza la consulta
     $result = mysqli_query($con,$sql);                     
@@ -30,28 +30,24 @@
     //echo "<table style='color:white;text-align:center;border: 1px solid;'>
     echo "<table>
         <tr>
-            <th>Placa</th>
-            <th>Tipo_vehiculo</th>
-            <th>Marca</th>   
-            <th>Modelo</th>
-            <th>Version_modelo</th>
-            <th>Numero_serie</th>
-            <th>Accion</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>   
+            <th>Hash</th>
+            <th>Acci&oacute;</th>
         </tr>";
 
         // Obtiene cada fila (arreglo) de resultados
         while($ren = mysqli_fetch_array($result)) {       
             echo "<tr>";
-                echo '<td>' . $ren['placa'] . '</td>';
-                echo "<td>" . $ren['tipo_vehiculo'] . "</td>";
-                echo "<td>" . $ren['marca'] . "</td>";
-                echo "<td>" . $ren['modelo'] . "</td>";
-                echo "<td>" . $ren['version_modelo'] . "</td>";
-                echo "<td>" . $ren['numero_serie'] . "</td>";
+                echo '<td>' . $ren['id'] . '</td>';
+                echo "<td>" . $ren['usuario'] . "</td>";
+                echo "<td>" . $ren['correo'] . "</td>";
+                echo "<td>" . $ren['contraseña'] . "</td>";
                 echo "<td>";
                 echo "     <form method='Post'>"; //El input en un form para realizar un submit ";
                 echo "         <input type='image' src='img/borrar.jpg' value='Borra Todo' 
-                               onclick='borrarUsuario3(".$ren['numero_serie'].")'>";
+                               onclick='borrarUsuario3(".$ren['id'].")'>";
                 echo "     </form>";
                 echo "</td>";
             echo "</tr>";

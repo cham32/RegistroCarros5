@@ -1,7 +1,7 @@
 function mostrarUsuario() {
     $.get('mostrar_usuario.php',            // la URL para la petición
         function(respuesta,status) {        //Funcion que recibe la respuesta
-            $("resultado2").html(respuesta);  //Cambia el DOM
+            $("#listausers").html(respuesta);  //Cambia el DOM
         },              
     );
 }
