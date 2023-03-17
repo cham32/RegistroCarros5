@@ -35,22 +35,20 @@
         function agregausua(){    
             $.post("agregarusuario.php",
                 {
-                    
                     usuario:$("#usuario").val(),
                     correo:$("#correo").val(),
                     contra:$("#contraseña").val()
-                   
                 }
             );  
            
         }
-        function linkrecuperacion(){    
-            $.post("./correo/enviar.php",
+        function linkrecuperacion(){
+            $.post("./enviar.php",
                 {
                     Username:$("#login").val(),
-                 
                 }
-            );  
+            );
+            location.href='index.html';
         }
         
 
