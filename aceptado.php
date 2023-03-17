@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if( isset( $_SESSION['access'] ) ) {
+  if ($_SESSION['access'] == 0) {
+    header("Location:login.html");
+  }
+} else {
+  header("Location:login.html");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
