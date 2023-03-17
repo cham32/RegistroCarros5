@@ -27,16 +27,16 @@ mysqli_close($con);
 try {
     //Configuracion del Servidor SMTP
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'tecmochis1234@gmail.com';
-    $mail->Password   = 'flbbwzvlecnurayn';
-    $mail->SMTPSecure = 'tls';
-    $mail->Port       = 587;
+    $mail->Host       = 'lamp-maildev';
+    $mail->SMTPAuth   = false;
+    $mail->Username   = 'chamlee@lamp-maildev';
+    $mail->Password   = '';
+    //$mail->SMTPSecure = 'tls';
+    $mail->Port       = 1025;
 
     //Remitente y Destinatario 
-    $mail->setFrom('tecmochis1234@gmail.com', 'Yo envie');
-    $mail->addAddress($User, 'Mi correo Personal');
+    $mail->setFrom('tecmochis1234@gmail.com', 'Remitente');
+    $mail->addAddress($User, 'Destinatario');
 
     //Contenido
     $mail->isHTML(true);
