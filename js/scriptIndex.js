@@ -28,16 +28,16 @@
                     marca:$("#marca").val(),
                     modelo:$("#modelo").val(),
                     version_modelo:$("#version_modelo").val(),
-                    numero_serie:$("#numero_serie").val()
+                    numero_serie:$("#numero_serie").val(),
                 }
             );  
         }
         function agregausua(){    
-            $.post("agregarusuario.php",
+            $.post("./agregarusuario.php",
                 {
                     usuario:$("#usuario").val(),
                     correo:$("#correo").val(),
-                    contra:$("#contraseña").val()
+                    contra:$("#contraseña").val(),
                 }
             );  
            

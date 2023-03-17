@@ -12,14 +12,14 @@ $mail = new PHPMailer(true);
 //Variables destinatario y contraseña
 $pass =substr(md5(rand()),1,10);
 $pass_hash = md5($pass);
-$User=$_POST['Username'];
+$User = $_POST['Username'];
 
 //Acciones de BD
 include("./configdb.php");
 if (!$con)
 die('No se pudo conectar: ' . mysqli_error($con));
-$sql="UPDATE usuarios SET contraseña='".$pass_hash."' WHERE correo='".$User."'";
-if($con->query($sql)=== TRUE){
+$sql = "UPDATE usuarios SET contraseña='".$pass_hash."' WHERE correo='".$User."'";
+if($con->query($sql) === TRUE){
     echo "usuario modificado correctamente";
 }else{
     echo "error al modificar usuario:". $con->error;
@@ -38,13 +38,13 @@ try {
     $mail->Port       = 1025;
 
     //Remitente y Destinatario 
-    $mail->setFrom('tecmochis1234@gmail.com', 'Remitente');
-    $mail->addAddress($User, 'Destinatario');
+    $mail->setFrom('tecmochis1234@gmail.com', 'App');
+    $mail->addAddress($User, 'Usuario');
 
     //Contenido
     $mail->isHTML(true);
     $mail->Subject = 'CAMBIO DE CONTRASEÑA';
-    $mail->Body    = 'Nueva contraseña: <b>' . $pass . '</b>';
+    $mail->Body    = 'Nueva contrase&ntilde;a: <b>' . $pass . '</b>';
     $mail->AltBody = 'Nueva contraseña: ' . $pass;
 
     $mail->send();

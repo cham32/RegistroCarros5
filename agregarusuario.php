@@ -1,14 +1,14 @@
 <?php
 $usuario = $_POST['usuario'];
 $correo =$_POST['correo'];
-$contraseña =password_hash($_POST['contraseña'],PASSWORD_DEFAULT);
+$contraseña = md5($_POST['contraseña']);
 
 include("./configdb.php");
 if (!$con)
 die('No se pudo conectar: ' . mysqli_error($con));
 
-$sql="insert into usuarios(usuario, correo, contraseña)";
-$sql=$sql." values('".$usuario."','".$correo."','".$contraseña."')";
+$sql = "INSERT INTO usuarios(usuario, correo, contraseña)";
+$sql = $sql." VALUES('".$usuario."','".$correo."','".$contraseña."')";
 $result = mysqli_query($con,$sql);                     
 mysqli_close($con);
 ?>
