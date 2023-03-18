@@ -30,7 +30,8 @@ function agregausua(){
             usuario:$("#usuario").val(),
             correo:$("#correo").val(),
             contra:$("#contraseña").val(),
-            rol:$("#rol").val(),
+            //rol:$("#rol").val(),
+            rol:getrol(),
         }
     );  
            
@@ -44,4 +45,14 @@ function linkrecuperacion(){
         }
     );
     location.href='index.html';
+}
+
+// Valor de radio button
+function getrol(){
+    if(document.getElementById('user').checked){
+        return 2;
+    }
+    if(document.getElementById('admin').checked){
+        return 1;
+    }
 }
