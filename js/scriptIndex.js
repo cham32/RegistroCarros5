@@ -30,6 +30,7 @@ function agregausua(){
             usuario:$("#usuario").val(),
             correo:$("#correo").val(),
             contra:$("#contraseña").val(),
+            rol:$("#rol").val(),
         }
     );  
            

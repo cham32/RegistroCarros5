@@ -43,6 +43,7 @@ if( isset( $_SESSION['access'] ) ) {
       <input class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario">
       <input class="controls" type="text" name="correo" id="correo" placeholder="Correo Electronico">
       <input class="controls" type="text" name="contraseña" id="contraseña" placeholder="Contraseña">
+      <input class="controls" type="text" name="rol" id="rol" placeholder="Rol: Admin 1, User 2">
       <input class="botons" type="submit" value="Guardar" onclick="agregausua()">
     </form>
   </section>

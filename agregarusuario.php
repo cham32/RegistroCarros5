@@ -2,6 +2,7 @@
 $usuario = $_POST['usuario'];
 $correo =$_POST['correo'];
 $contraseña = md5($_POST['contraseña']);
+$rol =$_POST['rol'];
 
 include("./configdb.php");
 if (!$con)
