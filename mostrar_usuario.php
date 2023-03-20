@@ -14,6 +14,7 @@
 <?php
   
     include("configdb.php");
+    include("funciones.php");
 
     if (!$con) {
         // imprime un mensaje de error y sale del script
@@ -43,7 +44,7 @@
                 echo '<td>' . $ren['id'] . '</td>';
                 echo "<td>" . $ren['usuario'] . "</td>";
                 echo "<td>" . $ren['correo'] . "</td>";
-                echo "<td>" . $ren['rol'] . "</td>";
+                echo "<td>" . roltexto($ren['rol']) . "</td>";
                 echo "<td>";
                 echo "     <form method='Post'>"; //El input en un form para realizar un submit ";
                 echo "         <input type='image' src='img/borrar.jpg' value='Borra Todo' 

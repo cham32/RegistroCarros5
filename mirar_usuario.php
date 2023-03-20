@@ -14,6 +14,7 @@
 <?php
   
     include("configdb.php");
+    include("funciones.php");
 
     if (!$con) {
         // imprime un mensaje de error y sale del script
@@ -42,7 +43,7 @@
                 echo '<td>' . $ren['id'] . '</td>';
                 echo "<td>" . $ren['usuario'] . "</td>";
                 echo "<td>" . $ren['correo'] . "</td>";
-                echo "<td>" . $ren['rol'] . "</td>";
+                echo "<td>" . roltexto($ren['rol']) . "</td>";
             echo "</tr>";
         }
     echo "</table>";
